@@ -39,3 +39,4 @@ jobs:
               -H "Content-Type: application/json" \
               --data-binary @/tmp/continue-body.json \
               https://circleci.com/api/v2/pipeline/continue
+
