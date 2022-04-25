@@ -1,4 +1,6 @@
 version: 2.1
+orbs: 
+  slack: circleci/slack@4.9.3
 
 setup: true
 
@@ -39,6 +41,12 @@ jobs:
               -H "Content-Type: application/json" \
               --data-binary @/tmp/continue-body.json \
               https://circleci.com/api/v2/pipeline/continue
+      - slack/notify:
+          context: slack-context
+          event: always
+          template: 
+          
+          
               
 
 
